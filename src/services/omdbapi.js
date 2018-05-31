@@ -1,15 +1,16 @@
-import dotenv from 'dotenv';
 import request from 'superagent';
 
-dotenv.config('../../.env');
+const key = '948ccddb';
+const baseURI = `http://www.omdbapi.com/?apikey=${key}&`;
 
-const APIKey = process.env.OMDB_APIKEY
-const baseURI = `http://www.omdbapi.com/?apikey=${APIkey}&`;
+export function search({ searchParam, page}) {
 
-
-export function search({ topic, page = 1 }) {
-  const searchURI = `s=${topic}&page=${page}`;
+  const searchURI = `s=${searchParam}&page=${page}`;
   const URI = baseURI + searchURI;
-  return request.get(URI);
+  return request.get(URI)
+    .then(response => {
+      
+      return { movies: response.body.Search, totalResults: response.body.totalResults };
+    });
 }
 
