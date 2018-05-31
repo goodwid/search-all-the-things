@@ -1,7 +1,7 @@
 import request from 'superagent';
 
 const key = '948ccddb';
-const baseURI = `http://www.omdbapi.com/?apikey=${key}&`;
+const baseURI = `https://www.omdbapi.com/?apikey=${key}&`;
 
 export function search({ searchParam, page }) {
 
