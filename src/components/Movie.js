@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './Movie.css';
 
 export default class Movie extends Component {
 
@@ -9,8 +10,8 @@ export default class Movie extends Component {
     return (
       <li>
         <h2><a href={url} target="_blank">{Title}</a></h2>
-        <h4>a {Type} Released in {Year}</h4>
-        <img className="poster" src={Poster} />
+        <h4>A {Type} released in {Year}</h4>
+        {Poster !== 'N/A' && <img className="poster" src={Poster} />}
       </li>
     );
   }

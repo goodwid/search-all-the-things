@@ -1,0 +1,13 @@
+.search-form {
+
+  font-family: 'Helvetica';
+
+  input {
+    border-radius: 5px;
+  }
+  
+  button {
+    color: red;
+    border-radius: 5px;
+  }
+}
