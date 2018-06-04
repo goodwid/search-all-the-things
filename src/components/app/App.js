@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import styles from './App.css';
-import { search } from '../services/omdbapi';
-import Paging from './Paging';
-import Results from './Results';
-import Search from './Search';
+import { search } from '../../services/omdbapi';
+import Paging from '../paging/Paging';
+import Results from '../movies/Results';
+import Search from '../search/Search';
 
 export default class App extends Component {
 
