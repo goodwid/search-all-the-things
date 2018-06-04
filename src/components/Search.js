@@ -12,7 +12,7 @@ export default class Search extends Component {
   };
 
   handleSubmit = e => {
-    e.preventDefault();https://goodwid.github.io/search-all-the-things/
+    e.preventDefault();
     this.props.onSearch(this.state);
   };
 

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Movie from './Movie';
+import styles from './Results.css';
 
 export default class Results extends Component {
 
